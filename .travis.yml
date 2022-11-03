@@ -19,7 +19,7 @@ script:
   - docker tag reverseproxy nebsdivo/reverseproxy:v1
   - docker tag udagram-api-user nebsdivo/udagram-api-user:v1
   - docker tag udagram-api-feed nebsdivo/udagram-api-feed:v1
-  - docker tag udagram-frontend nebsdivo/udagram-frontend:v1
+  - docker tag udagram-frontend:local nebsdivo/udagram-frontend:v1
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
