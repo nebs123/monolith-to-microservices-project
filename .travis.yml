@@ -16,10 +16,10 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker-compose -f docker-compose-build.yaml build --parallel
-  - docker tag reverseproxy nebsdivo/reverseproxy:v1
-  - docker tag udagram-api-user nebsdivo/udagram-api-user:v1
-  - docker tag udagram-api-feed nebsdivo/udagram-api-feed:v1
-  - docker tag udagram-frontend:local nebsdivo/udagram-frontend:v1
+  - docker tag reverseproxy nebsdivo/reverseproxy:v2
+  - docker tag udagram-api-user nebsdivo/udagram-api-user:v2
+  - docker tag udagram-api-feed nebsdivo/udagram-api-feed:v2
+  - docker tag udagram-frontend:local nebsdivo/udagram-frontend:v2
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
@@ -27,4 +27,3 @@ after_success:
   - docker push nebsdivo/udagram-api-user:v1
   - docker push nebsdivo/udagram-api-feed:v1
   - docker push nebsdivo/udagram-frontend:v1
-

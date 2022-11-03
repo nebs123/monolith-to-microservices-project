@@ -8,5 +8,5 @@ export AWS_BUCKET=nebs-udagram-dev
 export AWS_REGION=us-east-1
 export AWS_PROFILE=nebs-microservice
 export JWT_SECRET=helloworld
-export URL=http://localhost:8100
+export URL=http://a6edf8d9075f5424d9de1426311d54bd-1660441867.us-east-1.elb.amazonaws.com:8100
 
